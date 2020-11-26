@@ -1,6 +1,6 @@
 ### 商品クラス
 import pandas as pd
-import time
+import datetime
 import eel
 
 
@@ -64,7 +64,7 @@ def main():
     # マスタ登録されている商品を、商品名:価格のdictに変換
     item_dict = {item.item_code: [item.item_name, item.price] for item in item_master}
     
-    print(item_dict[item_code][1])
+    print(f'商品コード{item_code}は{item_dict[item_code][0]}で{item_dict[item_code][1]}円です')
     
     codes = []
     product_names = []
